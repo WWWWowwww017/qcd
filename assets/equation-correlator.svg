@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="140" viewBox="0 0 720 140" role="img" aria-labelledby="title desc">
+  <title id="title">Dispersion relation</title>
+  <desc id="desc">Pi of q squared equals one over pi times the integral from t min to infinity of the imaginary part of Pi of s over s minus q squared, with the integral over d s.</desc>
+  <rect width="720" height="140" fill="#f8f7f2"/>
+  <text x="20" y="88" fill="#102e42" font-family="Times New Roman, STIX Two Text, serif" font-size="40">Π(q²) = 1/π <tspan>∫</tspan><tspan dy="-19" font-size="22">∞</tspan><tspan dy="38" font-size="22">t<tspan font-size="16">min</tspan></tspan><tspan dy="-19"> Im Π(s)/(s − q²) ds</tspan></text>
+</svg>

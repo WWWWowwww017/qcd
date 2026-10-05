@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" role="img" aria-labelledby="title desc">
+  <title id="title">Operator equation</title>
+  <desc id="desc">K f equals g, with f in F and g in G.</desc>
+  <rect width="600" height="120" fill="#f8f7f2"/>
+  <text x="20" y="78" fill="#102e42" font-family="Times New Roman, STIX Two Text, serif" font-size="46">K f = g,   f ∈ F,   g ∈ G</text>
+</svg>

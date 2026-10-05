@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152c28">
+  <meta name="description" content="ηc 与 J/ψ 逆问题代码、归档结果和谱函数回放工作台。">
+  <link rel="canonical" href="__SITE_URL__code-lab.html">
+  <meta property="og:title" content="代码与数值结果 | Inverse Problem Approach">
+  <meta property="og:description" content="ηc 与 J/ψ 逆问题代码、归档结果和谱函数回放工作台。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__SITE_URL__code-lab.html">
+  <meta property="og:image" content="__SITE_URL__assets/paper_spectral.png">
+  <meta property="og:site_name" content="非微扰 QCD 逆问题研究资料">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="代码与数值结果 | Inverse Problem Approach">
+  <meta name="twitter:description" content="ηc 与 J/ψ 逆问题代码、归档结果和谱函数回放工作台。">
+  <meta name="twitter:image" content="__SITE_URL__assets/paper_spectral.png">
+  <title>代码与数值结果 | Inverse Problem Approach</title>
+  <link rel="icon" href="./assets/lzu_logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./lab.css">
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css">
+</head>
+<body class="lab-standalone" data-language="zh" data-title-zh="代码与数值结果 | Inverse Problem Approach" data-title-en="Code & Numerical Results | Inverse Problem Approach">
+  <header class="lab-site-bar">
+    <a href="./index.html" aria-label="返回研究展示首页" data-label-zh="返回研究展示首页" data-label-en="Back to research archive home">
+      <span>QCD / INVERSE PROBLEM</span>
+      <span class="lab-site-title">NON-PERTURBATIVE QCD / LANZHOU UNIVERSITY</span>
+    </a>
+    <div class="lab-site-actions">
+      <a href="./index.html"><span class="lang-zh">返回主页</span><span class="lang-en">Home</span></a>
+      <button class="language-button" type="button" aria-label="切换语言" data-label-zh="切换语言" data-label-en="Switch language" aria-pressed="false">
+        <span class="lang-zh">EN</span><span class="lang-en">中文</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="lab-section" id="code-lab">
+      <div class="lab-inner">
+        <div class="lab-heading">
+          <div>
+            <p class="lab-kicker">RESEARCH SOFTWARE / CHARMONIUM</p>
+            <h1><span class="lang-zh">数值代码与结果</span><span class="lang-en">Code & Numerical Results</span></h1>
+          </div>
+          <div class="lab-heading-actions">
+            <span class="lab-command lab-readonly-badge"><span class="lang-zh">只读回放</span><span class="lang-en">Read-only replay</span></span>
+          </div>
+        </div>
+
+        <div class="lab-workspace" aria-busy="true">
+          <div class="lab-toolbar">
+            <label class="lab-field"><span class="lang-zh">研究道</span><span class="lang-en">Channel</span>
+              <select id="lab-project" aria-label="研究道" data-label-zh="研究道" data-label-en="Research channel"><option value="eta-c">ηc · A–A n=0</option><option value="jpsi">J/ψ · n=0</option></select>
+            </label>
+            <label class="lab-field lab-file-field"><span class="lang-zh">源文件</span><span class="lang-en">Source File</span>
+              <select id="lab-file" aria-label="源文件" data-label-zh="源文件" data-label-en="Source file"></select>
+            </label>
+            <span class="lab-origin"><span class="lab-status-dot"></span><span class="lang-zh">归档参考结果</span><span class="lang-en">Archived Reference</span></span>
+          </div>
+
+          <div class="lab-columns">
+            <section class="lab-source" aria-label="源代码" data-label-zh="源代码" data-label-en="Source code">
+              <div class="lab-panel-bar">
+                <div class="lab-file-name"><i data-icon="file-code"></i><span id="lab-file-name">eta_c_inverse.m</span><span class="lab-language" id="lab-language">MATLAB</span></div>
+                <div class="lab-icon-tools">
+                  <label class="lab-wrap-toggle" title="代码自动换行"><input id="lab-wrap" type="checkbox"><span class="lang-zh">换行</span><span class="lang-en">Wrap</span></label>
+                </div>
+              </div>
+              <div class="lab-code-viewport" tabindex="0" aria-label="可滚动的源代码" data-label-zh="可滚动的源代码" data-label-en="Scrollable source code">
+                <pre id="lab-code" aria-label="源代码" data-label-zh="源代码" data-label-en="Source code"><code>正在读取归档文件…</code></pre>
+              </div>
+              <div class="lab-source-foot"><span id="lab-source-path">ηc/eta_c_inverse.m</span><span id="lab-line-count">-- lines</span></div>
+            </section>
+
+            <section class="lab-results" aria-label="结果图与摘要" data-label-zh="结果图与摘要" data-label-en="Result plot and summary">
+              <div class="lab-panel-bar lab-results-bar">
+                <div class="lab-result-tabs" role="tablist" aria-label="结果视图" data-label-zh="结果视图" data-label-en="Result views">
+                  <button type="button" role="tab" id="tab-spectrum" data-lab-view="spectrum" aria-controls="lab-plot-panel" aria-selected="true"><i data-icon="chart"></i><span class="lang-zh">谱函数</span><span class="lang-en">Spectrum</span></button>
+                  <button type="button" role="tab" id="tab-ope" data-lab-view="ope" aria-controls="lab-plot-panel" aria-selected="false" tabindex="-1">OPE</button>
+                  <button type="button" role="tab" id="tab-alpha" data-lab-view="alpha" aria-controls="lab-plot-panel" aria-selected="false" tabindex="-1">α</button>
+                  <button type="button" role="tab" id="tab-summary" data-lab-view="summary" aria-controls="lab-summary-panel" aria-selected="false" tabindex="-1"><span class="lang-zh">摘要</span><span class="lang-en">Summary</span></button>
+                </div>
+                <div class="lab-icon-tools">
+                  <button class="lab-icon-button" id="lab-reset" type="button" title="重置图表视图" data-title-zh="重置图表视图" data-title-en="Reset chart view" aria-label="重置图表视图" data-label-zh="重置图表视图" data-label-en="Reset chart view"><i data-icon="reset"></i></button>
+                </div>
+              </div>
+              <div class="lab-result-settings">
+                <label class="lab-field"><span class="lang-zh">结果来源</span><span class="lang-en">Result Source</span><select id="lab-source-select" aria-label="结果来源" data-label-zh="结果来源" data-label-en="Result source"><option value="matlab">MATLAB · reference_matlab.npz</option><option value="python">Python · result.npz</option></select></label>
+                <div class="lab-model-switch" role="group" aria-label="极点模型" data-label-zh="极点模型" data-label-en="Pole model"><button type="button" data-lab-model="1delta" aria-pressed="true">1δ</button><button type="button" data-lab-model="2delta" aria-pressed="false">2δ</button></div>
+              </div>
+              <div class="lab-geometry"><span class="math-inline" data-math="M^2\in[5,80]\,\mathrm{GeV}^2" data-math-fallback="M² ∈ [5, 80] GeV²">M² ∈ [5, 80] GeV²</span><span class="math-inline" data-math="\Lambda=30\,\mathrm{GeV}^2" data-math-fallback="Λ = 30 GeV²">Λ = 30 GeV²</span><span id="lab-model-label">ηc</span></div>
+              <div id="lab-plot-panel" class="lab-plot-panel" role="tabpanel" aria-labelledby="tab-spectrum">
+                <div id="lab-chart" role="img" aria-label="归档谱函数结果图" data-label-zh="归档谱函数结果图" data-label-en="Archived spectrum result plot"></div>
+                <div id="lab-chart-status" class="lab-chart-status" role="status" aria-live="polite" hidden></div>
+                <p class="lab-plot-caption" id="lab-plot-caption"></p>
+              </div>
+              <div id="lab-summary-panel" class="lab-summary-panel" role="tabpanel" aria-labelledby="tab-summary" hidden></div>
+              <div class="lab-alpha-control" id="lab-alpha-control">
+                <div><label for="lab-alpha-range"><span class="lang-zh">基准 α</span><span class="lang-en">Reference α</span></label><output id="lab-alpha-output" for="lab-alpha-range">--</output><span class="lab-alpha-count">8 <span class="lang-zh">个存储值</span><span class="lang-en">stored values</span></span></div>
+                <input id="lab-alpha-range" type="range" min="0" max="7" step="1" value="4" aria-label="MATLAB 基准 α" data-label-zh="MATLAB 基准 α" data-label-en="MATLAB reference alpha">
+                <div class="lab-range-ends"><span>10⁻²⁰</span><span>10⁰</span></div>
+              </div>
+              <div class="lab-output-strip"><div><span class="math-inline" data-math="f_1\,[\mathrm{GeV}]" data-math-fallback="f₁ [GeV]">f₁ [GeV]</span><strong id="lab-f">--</strong></div><div><span><span class="lang-zh">相对加权残差</span><span class="lang-en">Relative Residual</span></span><strong id="lab-residual">--</strong></div><div><span class="math-inline" data-math="\rho<0" data-math-fallback="ρ &lt; 0">ρ &lt; 0</span> <span class="lang-zh">节点</span><span class="lang-en">nodes</span><strong id="lab-negative">--</strong></div></div>
+              <div class="lab-pole-table" id="lab-poles"></div>
+            </section>
+          </div>
+          <div class="lab-workspace-foot" hidden aria-hidden="true"><span id="lab-result-path"></span><span class="lab-readonly-mark"><span class="lang-zh">归档只读</span><span class="lang-en">ARCHIVED READ ONLY</span></span></div>
+        </div>
+
+        <div class="lab-provenance" hidden aria-hidden="true">
+          <p id="lab-provenance"></p>
+          <p id="lab-limit-note"></p>
+        </div>
+        <div class="lab-error" id="lab-error" role="alert" hidden><span id="lab-error-text"></span><button class="lab-command" id="lab-retry" type="button"><i data-icon="reset"></i><span class="lang-zh">重试</span><span class="lang-en">Retry</span></button></div>
+        <div class="lab-notice" id="lab-notice" role="status" aria-live="polite"></div>
+        <noscript><p>代码工作台需要 JavaScript；当前页面仅提供只读研究成果展示。</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <script src="./vendor/plotly/plotly-basic.min.js"></script>
+  <script src="./vendor/prism/prism.js"></script>
+  <script src="./vendor/prism/prism-matlab.min.js"></script>
+  <script src="./vendor/prism/prism-python.min.js"></script>
+  <script src="./code/lab-data.js"></script>
+  <script src="./vendor/katex/katex.min.js"></script>
+  <script src="./math-render.js"></script>
+  <script src="./lab.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="170" viewBox="0 0 720 170" role="img" aria-labelledby="title desc">
+  <title id="title">Modified dispersion relation after scale separation</title>
+  <desc id="desc">Integral from t min to Lambda of Im Pi of s over s minus q squared equals pi Pi of q squared minus the integral from Lambda to infinity of Im Pi of s over s minus q squared.</desc>
+  <rect width="720" height="170" fill="#f8f7f2"/>
+  <g fill="#102e42" font-family="Times New Roman, STIX Two Text, serif" font-size="28">
+    <text x="30" y="66">∫<tspan baseline-shift="super" font-size="16">Λ</tspan><tspan baseline-shift="sub" font-size="16">tmin</tspan> ds  Im Π(s)/(s − q²) = π Π(q²)</text>
+    <text x="116" y="124">− ∫<tspan baseline-shift="super" font-size="16">∞</tspan><tspan baseline-shift="sub" font-size="16">Λ</tspan> ds  Im Π(s)/(s − q²)</text>
+  </g>
+</svg>

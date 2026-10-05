@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "id": "claim-fpi",
+      "page": "index.html#results",
+      "label": "fπ",
+      "value": "127.2 ± 4.7 MeV",
+      "kind": "paper_value",
+      "source": "docs/Application.pdf",
+      "page_number": 14,
+      "figure_or_table": "Table 1"
+    },
+    {
+      "id": "claim-fa1-1260",
+      "page": "index.html#results",
+      "label": "f_a₁(1260)",
+      "value": "284.7 ± 7.6 MeV",
+      "kind": "paper_value",
+      "source": "docs/Application.pdf",
+      "page_number": 14,
+      "figure_or_table": "Table 1"
+    },
+    {
+      "id": "claim-br-a1-1260",
+      "page": "index.html#results",
+      "label": "B(τ → a₁(1260)ντ)",
+      "value": "0.184 ± 0.032",
+      "kind": "paper_value",
+      "source": "docs/Application.pdf",
+      "page_number": 14,
+      "figure_or_table": "Table 1"
+    },
+    {
+      "id": "claim-br-a1-1640",
+      "page": "index.html#results",
+      "label": "B(τ → a₁(1640)ντ)",
+      "value": "0.015 ± 0.004",
+      "kind": "paper_value",
+      "source": "docs/Application.pdf",
+      "page_number": 14,
+      "figure_or_table": "Table 1"
+    },
+    {
+      "id": "claim-spectral-fig",
+      "page": "index.html#results",
+      "label": "ρ(s) 谱函数图",
+      "kind": "paper_figure",
+      "source": "docs/Application.pdf",
+      "page_number": 13,
+      "figure_or_table": "Figure 3"
+    },
+    {
+      "id": "replay-eta-c-python",
+      "page": "code-lab.html",
+      "label": "ηc Python 数值回放",
+      "kind": "archived_replay",
+      "source": "code/results/eta-c-preview.json",
+      "run_id": "ηc/results/eta_c_20260911T081808Z_umibh67u/result.npz"
+    },
+    {
+      "id": "replay-eta-c-matlab",
+      "page": "code-lab.html",
+      "label": "ηc MATLAB 参考回放",
+      "kind": "archived_replay",
+      "source": "code/results/eta-c-preview.json",
+      "run_id": "ηc/tests/reference_matlab.npz"
+    },
+    {
+      "id": "replay-jpsi-python",
+      "page": "code-lab.html",
+      "label": "J/ψ Python 数值回放",
+      "kind": "archived_replay",
+      "source": "code/results/jpsi-preview.json",
+      "run_id": "Jpsi/results/jpsi_20260911T081159Z_atve8rw8/result.npz"
+    }
+  ]
+}

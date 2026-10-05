@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" role="img" aria-labelledby="title desc">
+  <title id="title">Tikhonov regularization</title>
+  <desc id="desc">J alpha of f equals the squared norm of K f minus g delta plus alpha times the squared norm of f.</desc>
+  <rect width="600" height="120" fill="#f8f7f2"/>
+  <text x="20" y="78" fill="#102e42" font-family="Times New Roman, STIX Two Text, serif" font-size="42">Jα(f) = ‖Kf − gδ‖² + α‖f‖²</text>
+</svg>

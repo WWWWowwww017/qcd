@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="兰州大学核科学与技术学院理论物理研究组的非微扰 QCD 逆问题论文、方法、数值结果与代码资料。">
+  <link rel="canonical" href="__SITE_URL__">
+  <meta property="og:title" content="非微扰 QCD 逆问题研究资料">
+  <meta property="og:description" content="论文、方法概览、数值结果与代码工作台。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__SITE_URL__">
+  <meta property="og:image" content="__SITE_URL__assets/paper_spectral.png">
+  <meta property="og:site_name" content="非微扰 QCD 逆问题研究资料">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="非微扰 QCD 逆问题研究资料">
+  <meta name="twitter:description" content="论文、方法概览、数值结果与代码工作台。">
+  <meta name="twitter:image" content="__SITE_URL__assets/paper_spectral.png">
+  <title>非微扰 QCD 逆问题研究资料</title>
+  <link rel="icon" href="./assets/lzu_logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "非微扰 QCD 逆问题研究资料",
+    "url": "__SITE_URL__",
+    "inLanguage": ["zh-CN", "en"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "兰州大学核科学与技术学院",
+    "url": "https://snst.lzu.edu.cn/"
+  }
+  </script>
+</head>
+<body data-language="zh" data-title-zh="非微扰 QCD 逆问题研究资料" data-title-en="Inverse Problems in Non-perturbative QCD Research Archive">
+  <a class="skip-link" href="#main"><span class="lang-zh">跳到主要内容</span><span class="lang-en">Skip to content</span></a>
+
+  <header class="site-header" id="top">
+    <div class="nav-wrap page-width">
+      <div class="brand">
+        <a class="brand-primary" href="#top" aria-label="返回页面顶部" data-label-zh="返回页面顶部" data-label-en="Back to top">
+          <span class="brand-mark"><img src="./assets/lzu_logo.svg" alt="兰州大学校徽"></span>
+          <span class="school-copy">
+            <strong><span class="lang-zh">兰州大学</span><span class="lang-en">兰州大学</span></strong>
+            <span>LANZHOU UNIVERSITY</span>
+          </span>
+        </a>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <a class="unit-lockup" href="https://snst.lzu.edu.cn/" target="_blank" rel="noopener noreferrer" aria-label="兰州大学核科学与技术学院官网" data-label-zh="兰州大学核科学与技术学院官网" data-label-en="Lanzhou University School of Nuclear Science and Technology website">
+          <img class="unit-logo" src="./assets/lzu_snst_logo.svg" alt="兰州大学核科学与技术学院院徽">
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="页面导航" data-label-zh="页面导航" data-label-en="Page navigation">
+        <a href="#papers"><span class="lang-zh">工作展示</span><span class="lang-en">Work</span></a>
+        <a href="#method"><span class="lang-zh">方法</span><span class="lang-en">Method</span></a>
+        <a href="#results"><span class="lang-zh">结果</span><span class="lang-en">Results</span></a>
+        <a href="#code-lab"><span class="lang-zh">代码</span><span class="lang-en">Code</span></a>
+        <a href="#notes"><span class="lang-zh">说明</span><span class="lang-en">Notes</span></a>
+      </nav>
+      <button class="language-button" type="button" aria-label="切换语言" data-label-zh="切换语言" data-label-en="Switch language" aria-pressed="false">
+        <span class="lang-zh">EN</span><span class="lang-en">中文</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="research-header page-section" data-reveal>
+      <div class="page-width hero-content">
+        <h1><span class="lang-zh">非微扰 QCD 的逆问题研究</span><span class="lang-en">Inverse problems in non-perturbative QCD</span></h1>
+        <p class="project-byline">
+          <span class="lang-zh">兰州大学 · 于福升团队</span>
+          <span class="lang-en">Lanzhou University · Fu-Sheng Yu Group</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-muted page-section" id="method">
+      <div class="page-width">
+        <div class="section-heading section-heading--solo" data-reveal>
+          <div><p class="section-number">01</p><h2><span class="lang-zh">方法概览</span><span class="lang-en">Method</span></h2></div>
+        </div>
+
+        <ol class="method-list">
+          <li class="method-row" data-reveal>
+            <span class="method-number">01</span>
+            <div class="method-copy"><h3><span class="lang-zh">关联函数与色散关系</span><span class="lang-en">Correlator and dispersion relation</span></h3><p><span class="lang-zh">由关联函数的解析性得到色散关系。</span><span class="lang-en">Analyticity of the correlator gives a dispersion relation.</span></p></div>
+            <div class="method-equation">
+              <div class="math-display" data-math="\Pi(q^2)=\frac{1}{\pi}\int_{t_{\min}}^{\infty}\frac{\operatorname{Im}\Pi(s)}{s-q^2}\,\mathrm{d}s" data-math-fallback="Π(q²) = 1/π ∫[tmin,∞] Im Π(s)/(s − q²) ds" aria-label="Π(q²) 等于一除以 π 乘以从 t min 到无穷的 Im Π(s) 除以 s 减 q² 的积分">Π(q²) = 1/π ∫ Im Π(s)/(s − q²) ds</div>
+            </div>
+          </li>
+          <li class="method-row" data-reveal>
+            <span class="method-number">02</span>
+            <div class="method-copy"><h3><span class="lang-zh">能标分离</span><span class="lang-en">Scale separation</span></h3><p><span class="lang-zh">在 Λ 处分开低能未知谱函数与高能 OPE 输入。</span><span class="lang-en">The unknown low-energy spectrum is separated from the high-energy OPE input at Λ.</span></p></div>
+            <div class="method-equation">
+              <div class="math-display" data-math="\int_{t_{\min}}^{\Lambda}\frac{\operatorname{Im}\Pi(s)}{s-q^2}\,\mathrm{d}s=\pi\Pi(q^2)-\int_{\Lambda}^{\infty}\frac{\operatorname{Im}\Pi(s)}{s-q^2}\,\mathrm{d}s" data-math-fallback="∫[tmin,Λ] Im Π(s)/(s − q²) ds = πΠ(q²) − ∫[Λ,∞] Im Π(s)/(s − q²) ds" aria-label="能标分离后的修正色散关系">∫ Im Π(s)/(s − q²) ds = πΠ(q²) − ∫ Im Π(s)/(s − q²) ds</div>
+            </div>
+          </li>
+          <li class="method-row" data-reveal>
+            <span class="method-number">03</span>
+            <div class="method-copy"><h3><span class="lang-zh">第一类 Fredholm 方程</span><span class="lang-en">First-kind Fredholm equation</span></h3><p><span class="lang-zh">将谱函数重构写为算子方程 Kf = g。</span><span class="lang-en">The reconstruction is written as the operator equation Kf = g.</span></p></div>
+            <div class="method-equation">
+              <div class="math-display" data-math="Kf=g,\qquad f\in F,\qquad g\in G" data-math-fallback="Kf = g, f ∈ F, g ∈ G" aria-label="Kf 等于 g，f 属于 F，g 属于 G">Kf = g, f ∈ F, g ∈ G</div>
+            </div>
+          </li>
+          <li class="method-row" data-reveal>
+            <span class="method-number">04</span>
+            <div class="method-copy"><h3><span class="lang-zh">Tikhonov 正则化</span><span class="lang-en">Tikhonov regularization</span></h3><p><span class="lang-zh">在数据拟合和解的稳定性之间选择正则化参数 α。</span><span class="lang-en">The regularization parameter α balances data fit and stability.</span></p></div>
+            <div class="method-equation">
+              <div class="math-display" data-math="J_{\alpha}(f):=\lVert Kf-g^{\delta}\rVert_G^2+\alpha\lVert f\rVert_F^2,\qquad f\in F" data-math-fallback="Jα(f) := ‖Kf − gδ‖G² + α‖f‖F², f ∈ F" aria-label="Tikhonov 泛函 J alpha of f 等于 Kf 减 g delta 的 G 范数平方加 alpha 乘以 f 的 F 范数平方，f 属于 F">Jα(f) := ‖Kf − gδ‖G² + α‖f‖F², f ∈ F</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section page-section work-display-section" id="papers">
+      <div class="page-width">
+        <span id="results" class="section-anchor" aria-hidden="true"></span>
+        <div class="section-heading" data-reveal>
+          <div><p class="section-number">02</p><h2><span class="lang-zh">工作展示</span><span class="lang-en">Work Display</span></h2></div>
+        </div>
+
+        <div class="archive-list">
+          <details class="archive-entry" data-reveal>
+            <summary class="archive-summary" data-open-pdf="./docs/Foundation.pdf" aria-expanded="false">
+              <span class="archive-index">01</span>
+              <span class="archive-title">Foundation</span>
+              <time datetime="2026-05-05">2026-05-05</time>
+              <span class="archive-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="archive-content">
+              <div class="paper-main">
+                <p class="archive-type"><span class="lang-zh">理论基础</span><span class="lang-en">Theoretical foundation</span></p>
+                <h3>Inverse Problem Approach for Non-Perturbative QCD: Theoretical Foundation</h3>
+                <p class="paper-authors">Ao-Sheng Xiong · Fu-Sheng Yu · Yong Zheng · Ting Wei</p>
+                <p><span class="lang-zh">建立色散关系逆问题的数学框架，讨论唯一性、不稳定性、Tikhonov 正则化、参数选择、有限元离散化和收敛性。</span><span class="lang-en">Develops the mathematical framework for the dispersion-relation inverse problem, including uniqueness, instability, Tikhonov regularization, parameter choice, finite-element discretization, and convergence.</span></p>
+              </div>
+              <a class="paper-link" href="./docs/Foundation.pdf" target="_blank" rel="noopener noreferrer"><span class="lang-zh">阅读 PDF</span><span class="lang-en">Read PDF</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+
+          <details class="archive-entry" data-reveal>
+            <summary class="archive-summary" data-open-pdf="./docs/Application.pdf" aria-expanded="false">
+              <span class="archive-index">02</span>
+              <span class="archive-title">Application</span>
+              <time datetime="2026-08-15">2026-08-15</time>
+              <span class="archive-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="archive-content">
+              <div class="paper-main">
+                <p class="archive-type"><span class="lang-zh">数值应用</span><span class="lang-en">Numerical application</span></p>
+                <h3>Inverse Problem Approach for Non-Perturbative QCD: Applications</h3>
+                <p class="paper-authors">Yong Zheng · Ao-Sheng Xiong · Fu-Sheng Yu · Ting Wei</p>
+                <p><span class="lang-zh">将方法应用于轴矢流关联函数，重构 π 与 a₁(1260) 的谱信息和衰变常数，并分析输入误差、收敛性与夸克–强子对偶。</span><span class="lang-en">Applies the method to axial-vector correlators, reconstructs the spectral information and decay constants of π and a₁(1260), and studies input errors, convergence, and quark–hadron duality.</span></p>
+              </div>
+              <a class="paper-link" href="./docs/Application.pdf" target="_blank" rel="noopener noreferrer"><span class="lang-zh">阅读 PDF</span><span class="lang-en">Read PDF</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted page-section" id="code-lab">
+      <div class="page-width">
+        <div class="section-heading section-heading--solo" data-reveal>
+          <div><p class="section-number">03</p><h2><span class="lang-zh">代码与结果</span><span class="lang-en">Code and results</span></h2></div>
+        </div>
+        <a class="workbench-entry" href="./code-lab.html" data-reveal>
+          <strong><span class="lang-zh">打开 MATLAB / Python 代码与数值结果</span><span class="lang-en">Open MATLAB / Python code and numerical results</span></strong>
+          <span class="workbench-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section page-section team-section" id="team">
+      <div class="page-width team-inner">
+        <div class="section-heading section-heading--solo" data-reveal>
+          <div><p class="section-number">04</p><h2><span class="lang-zh">团队介绍</span><span class="lang-en">Team</span></h2></div>
+        </div>
+        <div class="team-placeholder" data-reveal>
+          <span class="team-placeholder-mark" aria-hidden="true">—</span>
+          <p><span class="lang-zh">团队信息待补充。</span><span class="lang-en">Team information will be added when confirmed.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted page-section contact-section" id="contact">
+      <div class="page-width">
+        <span id="notes" class="section-anchor" aria-hidden="true"></span>
+        <div class="section-heading section-heading--solo" data-reveal>
+          <div><p class="section-number">05</p><h2><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span></h2></div>
+        </div>
+        <div class="contact-block" data-reveal>
+          <div class="contact-links">
+            <a class="contact-link" href="https://snst.lzu.edu.cn/shiziduiwu/jiaoshou/2024/1015/277664.html" target="_blank" rel="noopener noreferrer"><span class="lang-zh">兰州大学核科学与技术学院【官网】</span><span class="lang-en">Lanzhou University School of Nuclear Science and Technology · Official site</span></a>
+            <a class="contact-link" href="mailto:yufsh@lzu.edu.cn"><span class="lang-zh">发送邮件</span><span class="lang-en">Send email</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner" data-reveal>
+      <div class="footer-brand"><strong>兰州大学 · 核科学与技术学院</strong><span>非微扰 QCD 的逆问题研究</span><span>兰州大学 · 于福升团队</span></div>
+      <nav class="footer-links" aria-label="页脚链接" data-label-zh="页脚链接" data-label-en="Footer links">
+        <a href="https://snst.lzu.edu.cn/shiziduiwu/jiaoshou/2024/1015/277664.html" target="_blank" rel="noopener noreferrer"><span class="lang-zh">官网</span><span class="lang-en">Official site</span></a>
+        <a href="mailto:yufsh@lzu.edu.cn"><span class="lang-zh">发送邮件</span><span class="lang-en">Send email</span></a>
+        <a href="#top"><span class="lang-zh">回到顶部 ↑</span><span class="lang-en">Back to top ↑</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./vendor/katex/katex.min.js"></script>
+  <script src="./math-render.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
